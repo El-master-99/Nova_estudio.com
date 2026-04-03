@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA STUDIO — La protagonista eres tú</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ LOADER ═══════════════════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__logo">NOVA</span>
+      <div class="loader__bar"><div class="loader__progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ CURSOR ═══════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════════════════ HEADER / NAV ═══════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#hero" class="logo">
+        <span class="logo__main">NOVA</span>
+        <span class="logo__sub">STUDIO</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#servicios" class="nav__link" data-text="Servicios">Servicios</a></li>
+          <li><a href="#nosotros" class="nav__link" data-text="Nosotros">Nosotros</a></li>
+          <li><a href="#galeria" class="nav__link" data-text="Galería">Galería</a></li>
+          <li><a href="#productos" class="nav__link" data-text="Productos">Productos</a></li>
+          <li><a href="#contacto" class="nav__link" data-text="Contacto">Contacto</a></li>
+        </ul>
+        <a href="#reservas" class="btn btn--outline nav__cta">Reservar Cita</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__overlay"></div>
+      <!-- Imagen principal: reemplaza src con tu imagen real -->
+      <img src="inicio.jpeg" alt="Nova Studio" class="hero__img" />
+    </div>
+
+    <div class="hero__content container">
+      <p class="hero__pretitle reveal">Bienvenida a</p>
+      <h1 class="hero__title reveal">
+        <span>NOVA</span>
+        <em>STUDIO</em>
+      </h1>
+      <p class="hero__slogan reveal">La protagonista eres tú</p>
+      <p class="hero__desc reveal">Donde cada visita es una experiencia de transformación. Peinados, cortes, manicura, pedicura, tratamientos faciales y mucho más.</p>
+      <div class="hero__actions reveal">
+        <a href="#reservas" class="btn btn--primary">Reserva tu cita</a>
+        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+
+    <!-- Decorative label -->
+    <div class="hero__badge">
+      <svg viewBox="0 0 120 120" width="120" height="120">
+        <defs>
+          <path id="circle-text" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/>
+        </defs>
+        <text class="badge-text">
+          <textPath href="#circle-text">NOVA STUDIO · EST. 2024 · BEAUTY ·</textPath>
+        </text>
+      </svg>
+      <span class="hero__badge-icon">✦</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ MARQUEE ═══════════════════════════ -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Peinados &amp; Cortes</span><span class="marquee__dot">✦</span>
+      <span>Manicura &amp; Pedicura</span><span class="marquee__dot">✦</span>
+      <span>Tratamientos Faciales</span><span class="marquee__dot">✦</span>
+      <span>Productos de Belleza</span><span class="marquee__dot">✦</span>
+      <span>Coloración</span><span class="marquee__dot">✦</span>
+      <span>Peinados &amp; Cortes</span><span class="marquee__dot">✦</span>
+      <span>Manicura &amp; Pedicura</span><span class="marquee__dot">✦</span>
+      <span>Tratamientos Faciales</span><span class="marquee__dot">✦</span>
+      <span>Productos de Belleza</span><span class="marquee__dot">✦</span>
+      <span>Coloración</span><span class="marquee__dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ SERVICIOS ═══════════════════════════ -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__pretitle reveal">Lo que ofrecemos</p>
+        <h2 class="section__title reveal">Nuestros <em>Servicios</em></h2>
+        <p class="section__desc reveal">Cada servicio es diseñado para realzar tu belleza única. Aquí encontrarás todo lo que necesitas para sentirte espectacular.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal" data-delay="0">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1672788725446-c303ec2b318e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoYWlyc3R5bGluZ3xlbnwwfHx8fDE3NzUxNTIxODJ8MA&ixlib=rb-4.1.0&q=85" alt="Peinados y Cortes" />
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon">✂</div>
+            <h3>Peinados &amp; Cortes</h3>
+            <p>Cortes de precisión y peinados que definen tu estilo personal. Desde clásicos atemporales hasta tendencias actuales.</p>
+            <a href="#reservas" class="service-card__link">Reservar →</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal" data-delay="100">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxtYW5pY3VyZXxlbnwwfHx8fDE3NzUxNTIxODZ8MA&ixlib=rb-4.1.0&q=85" alt="Manicura" />
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon">💅</div>
+            <h3>Manicura</h3>
+            <p>Uñas perfectas que hablan por ti. Diseños únicos, semipermanentes, acrílicas y tratamientos de hidratación.</p>
+            <a href="#reservas" class="service-card__link">Reservar →</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal" data-delay="200">
+          <div class="service-card__img">
+            <img src="https://lartistnail.es/wp-content/uploads/2022/03/diferencia-entre-manicura-y-pedicura.webp" alt="Pedicura" />
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon">🌸</div>
+            <h3>Pedicura</h3>
+            <p>Mima tus pies con nuestros tratamientos premium. Exfoliación, hidratación profunda y acabados impecables.</p>
+            <a href="#reservas" class="service-card__link">Reservar →</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal" data-delay="300">
+          <div class="service-card__img">
+            <img src="https://b3693182.smushcdn.com/3693182/wp-content/uploads/2022/05/tratamientos-dermatologicos-para-cuidado-de-la-piel.png?lossy=2&strip=1&webp=1" alt="Tratamiento Facial" />
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon">✨</div>
+            <h3>Tratamientos Faciales</h3>
+            <p>Revitaliza tu piel con nuestros protocolos faciales personalizados. Limpieza profunda, hidratación y anti-edad.</p>
+            <a href="#reservas" class="service-card__link">Reservar →</a>
+          </div>
+        </article>
+
+        <article class="service-card reveal" data-delay="400">
+          <div class="service-card__img">
+            <img src="https://images.unsplash.com/photo-1707720531504-ce087725861a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBoYWlyc3R5bGluZ3xlbnwwfHx8fDE3NzUxNTIxODJ8MA&ixlib=rb-4.1.0&q=85" alt="Coloración" />
+            <div class="service-card__overlay"></div>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon">🎨</div>
+            <h3>Coloración</h3>
+            <p>Balayage, mechas, tintes y técnicas de color de vanguardia. Transforma tu look con nuestra colorista experta.</p>
+            <a href="#reservas" class="service-card__link">Reservar →</a>
+          </div>
+        </article>
+
+        <article class="service-card service-card--cta reveal" data-delay="500">
+          <div class="service-card__body service-card__body--cta">
+            <p class="service-card__cta-tag">¿Lista para brillar?</p>
+            <h3>¿No encuentras lo que buscas?</h3>
+            <p>Contáctanos y diseñamos un servicio personalizado solo para ti.</p>
+            <a href="#contacto" class="btn btn--primary">Contáctanos</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ NOSOTROS ═══════════════════════════ -->
+  <section class="section nosotros" id="nosotros">
+    <div class="nosotros__bg-text">NOVA</div>
+    <div class="container nosotros__grid">
+      <div class="nosotros__media reveal">
+        <div class="nosotros__img-wrap">
+          <!-- Reemplaza con tu foto real -->
+          <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=700&q=80" alt="Nuestro equipo" class="nosotros__img" />
+          <div class="nosotros__img-deco"></div>
+        </div>
+        <div class="nosotros__stat-card">
+          <span class="nosotros__stat-number" data-target="500">0</span>
+          <span>+</span>
+          <p>Clientas satisfechas</p>
+        </div>
+      </div>
+
+      <div class="nosotros__text">
+        <p class="section__pretitle reveal">Quiénes somos</p>
+        <h2 class="section__title reveal">Más que un salón,<br/><em>una experiencia</em></h2>
+        <p class="nosotros__p reveal">En <strong>NOVA STUDIO</strong> creemos que cada mujer merece sentirse protagonista de su propia historia. Por eso, desde el primer momento en que cruzas nuestra puerta, nos dedicamos completamente a ti.</p>
+        <p class="nosotros__p reveal">Nuestro equipo de profesionales se forma continuamente en las últimas tendencias mundiales para ofrecerte técnicas y productos de primera calidad, siempre con un trato cercano y personalizado.</p>
+
+        <ul class="nosotros__features reveal">
+          <li><span>✦</span> Equipo certificado y en constante formación</li>
+          <li><span>✦</span> Productos premium seleccionados</li>
+          <li><span>✦</span> Ambiente exclusivo y relajante</li>
+          <li><span>✦</span> Atención 100% personalizada</li>
+        </ul>
+
+        <a href="#reservas" class="btn btn--primary reveal">Reserva tu espacio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ GALERÍA ═══════════════════════════ -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__pretitle reveal">Nuestro trabajo</p>
+        <h2 class="section__title reveal">La <em>Galería</em></h2>
+        <p class="section__desc reveal">Cada imagen cuenta una historia de transformación. Descubre el antes y después de nuestras clientas.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="galeria__filters reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="cortes">Cortes</button>
+        <button class="filter-btn" data-filter="color">Color</button>
+        <button class="filter-btn" data-filter="nails">Uñas</button>
+        <button class="filter-btn" data-filter="facial">Facial</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" data-category="cortes">
+          <img src="https://images.pexels.com/photos/3065208/pexels-photo-3065208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Corte cabello" />
+          <div class="gallery-item__overlay"><span>Cortes</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="color">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=500&q=80" alt="Coloración" />
+          <div class="gallery-item__overlay"><span>Coloración</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="nails">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Manicura" />
+          <div class="gallery-item__overlay"><span>Manicura</span></div>
+        </div>
+        <div class="gallery-item gallery-item--wide reveal" data-category="cortes">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80" alt="Peinado" />
+          <div class="gallery-item__overlay"><span>Peinado</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="facial">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=80" alt="Facial" />
+          <div class="gallery-item__overlay"><span>Facial</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="nails">
+          <img src="https://kaylenstore.com/cdn/shop/files/Square_Artificial_Fake_Nude_Art_Toe_Nail_Tips.jpg?v=1762882102&width=1445" alt="Pedicura" />
+          <div class="gallery-item__overlay"><span>Pedicura</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="color">
+          <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=500&q=80" alt="Balayage" />
+          <div class="gallery-item__overlay"><span>Balayage</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="cortes">
+          <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=80" alt="Corte moderno" />
+          <div class="gallery-item__overlay"><span>Cortes</span></div>
+        </div>
+        
+        <div class="gallery-item reveal" data-category="cortes">
+          <img src="https://images.unsplash.com/photo-1673465766620-1f336d434bff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoYWlyc3R5bGluZ3xlbnwwfHx8fDE3NzUxNTIxODJ8MA&ixlib=rb-4.1.0&q=85" alt="Corte moderno" />
+          <div class="gallery-item__overlay"><span>Cortes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PRODUCTOS ═══════════════════════════ -->
+  <section class="section productos" id="productos">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__pretitle reveal">Tienda</p>
+        <h2 class="section__title reveal">Productos de <em>Belleza</em></h2>
+        <p class="section__desc reveal">Lleva la experiencia Nova Studio a casa con nuestra selección de productos premium.</p>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card reveal">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=80" alt="Shampoo" />
+            <div class="product-card__badge">Favorito</div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Cabello</span>
+            <h4>Shampoo Premium Hidratación</h4>
+            <p>Fórmula enriquecida con aceites esenciales para cabello brillante y suave.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">S/ 45.00</span>
+              <button class="btn btn--small" onclick="addToCart(this)">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&q=80" alt="Crema facial" />
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Facial</span>
+            <h4>Crema Antienvejecimiento</h4>
+            <p>Reduce las líneas de expresión y aporta luminosidad a tu piel.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">S/ 89.00</span>
+              <button class="btn btn--small" onclick="addToCart(this)">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80" alt="Aceite" />
+            <div class="product-card__badge">Nuevo</div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Tratamiento</span>
+            <h4>Aceite de Argán Nutritivo</h4>
+            <p>Tratamiento intensivo para restaurar la vitalidad del cabello dañado.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">S/ 62.00</span>
+              <button class="btn btn--small" onclick="addToCart(this)">Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card__img">
+            <img src="https://m.media-amazon.com/images/I/61dqATdjnVL._SX425_.jpg" alt="Esmalte" />
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Uñas</span>
+            <h4>Set Esmaltes Premium</h4>
+            <p>Colores de larga duración con fórmula libre de químicos dañinos.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">S/ 78.00</span>
+              <button class="btn btn--small" onclick="addToCart(this)">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="productos__cta reveal">
+        <a href="#contacto" class="btn btn--outline">Ver catálogo completo</a>
+      </div>
+    </div>
+    <!-- Cart notification -->
+    <div class="cart-toast" id="cartToast">✓ Producto añadido al carrito</div>
+  </section>
+
+  <!-- ═══════════════════════════ TESTIMONIOS ═══════════════════════════ -->
+  <section class="section testimonios">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__pretitle reveal">Lo que dicen</p>
+        <h2 class="section__title reveal">Nuestras <em>Clientas</em></h2>
+      </div>
+
+      <div class="testimonios__slider" id="testimoniosSlider">
+        <div class="testimonios__track" id="testimoniosTrack">
+
+          <div class="testimonio-card">
+            <div class="testimonio-card__stars">★★★★★</div>
+            <p class="testimonio-card__text">"¡Nova Studio transformó completamente mi look! El equipo es increíblemente talentoso y el ambiente es hermoso. Definitivamente mi lugar favorito."</p>
+            <div class="testimonio-card__author">
+              <!-- Reemplaza src con foto real -->
+              <img src="https://i.pravatar.cc/60?img=47" alt="María G." />
+              <div>
+                <strong>María García</strong>
+                <span>Cliente fiel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonio-card">
+            <div class="testimonio-card__stars">★★★★★</div>
+            <p class="testimonio-card__text">"La mejor manicura que he tenido en años. Los diseños son únicos y la duración es impresionante. Volveré siempre a Nova Studio."</p>
+            <div class="testimonio-card__author">
+              <img src="https://i.pravatar.cc/60?img=44" alt="Lucía P." />
+              <div>
+                <strong>Lucía Pérez</strong>
+                <span>Cliente nueva</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonio-card">
+            <div class="testimonio-card__stars">★★★★★</div>
+            <p class="testimonio-card__text">"El tratamiento facial me dejó la piel radiante. Se nota que usan productos de calidad y cada persona sabe perfectamente lo que hace."</p>
+            <div class="testimonio-card__author">
+              <img src="https://i.pravatar.cc/60?img=32" alt="Andrea M." />
+              <div>
+                <strong>Andrea Morales</strong>
+                <span>Cliente frecuente</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonio-card">
+            <div class="testimonio-card__stars">★★★★★</div>
+            <p class="testimonio-card__text">"Fui por primera vez y salí sintiéndome la protagonista de mi propia vida. El slogan lo dice todo. ¡Gracias Nova Studio!"</p>
+            <div class="testimonio-card__author">
+              <img src="https://i.pravatar.cc/60?img=56" alt="Sofía R." />
+              <div>
+                <strong>Sofía Ramírez</strong>
+                <span>Cliente nueva</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonios__controls">
+          <button class="testimonios__btn" id="prevBtn" aria-label="Anterior">←</button>
+          <div class="testimonios__dots" id="testimoniosDots"></div>
+          <button class="testimonios__btn" id="nextBtn" aria-label="Siguiente">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ RESERVAS ═══════════════════════════ -->
+  <section class="section reservas" id="reservas">
+    <div class="reservas__bg">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1400&q=70" alt="Reservas" />
+      <div class="reservas__overlay"></div>
+    </div>
+    <div class="container reservas__content">
+      <div class="reservas__text reveal">
+        <p class="section__pretitle">¿Lista para brillar?</p>
+        <h2 class="section__title">Reserva tu <em>Cita</em></h2>
+        <p>Agenda tu visita en minutos. Nuestro equipo estará encantado de recibirte y consentirte.</p>
+        <ul class="reservas__info">
+          <li>📍 Dirección: Jr Lima 385, Huancayo</li>
+          <li>📞 Teléfono: +51 937007370</li>
+          <li>🕐 Lunes a Sábado: 9am – 7pm</li>
+          <li>🕐 Domingo: 10am – 4pm</li>
+        </ul>
+      </div>
+
+      <div class="reservas__form reveal">
+        <form class="form" id="reservaForm" novalidate>
+          <div class="form__group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            <span class="form__error" id="nombreError"></span>
+          </div>
+          <div class="form__group">
+            <label for="telefono">Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+51 XXX XXX XXX" required />
+            <span class="form__error" id="telefonoError"></span>
+          </div>
+          <div class="form__group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" />
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="fecha">Fecha *</label>
+              <input type="date" id="fecha" name="fecha" required />
+              <span class="form__error" id="fechaError"></span>
+            </div>
+            <div class="form__group">
+              <label for="hora">Hora *</label>
+              <select id="hora" name="hora" required>
+                <option value="">Seleccionar</option>
+                <option>09:00</option><option>09:30</option>
+                <option>10:00</option><option>10:30</option>
+                <option>11:00</option><option>11:30</option>
+                <option>12:00</option><option>12:30</option>
+                <option>13:00</option><option>14:00</option>
+                <option>14:30</option><option>15:00</option>
+                <option>15:30</option><option>16:00</option>
+                <option>16:30</option><option>17:00</option>
+                <option>17:30</option><option>18:00</option>
+              </select>
+              <span class="form__error" id="horaError"></span>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="servicio">Servicio de interés *</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Elige un servicio</option>
+              <option>Peinado</option>
+              <option>Corte de cabello</option>
+              <option>Coloración / Balayage</option>
+              <option>Manicura</option>
+              <option>Pedicura</option>
+              <option>Tratamiento facial</option>
+              <option>Manicura + Pedicura</option>
+              <option>Pack completo</option>
+              <option>Otro (especificar en mensaje)</option>
+            </select>
+            <span class="form__error" id="servicioError"></span>
+          </div>
+          <div class="form__group">
+            <label for="mensaje">Mensaje adicional</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos algo más sobre lo que buscas..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Confirmar Reserva</button>
+        </form>
+        <div class="form__success" id="formSuccess">
+          <div class="form__success-icon">✓</div>
+          <h3>¡Reserva enviada!</h3>
+          <p>Te contactaremos pronto para confirmar tu cita. ¡Nos vemos muy pronto!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACTO ═══════════════════════════ -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__pretitle reveal">Estamos aquí</p>
+        <h2 class="section__title reveal">Encuéntranos</h2>
+      </div>
+
+      <div class="contacto__grid">
+        <div class="contacto__cards reveal">
+          <div class="contact-card">
+            <div class="contact-card__icon">📍</div>
+            <h4>Dirección</h4>
+            <p>Jr Lima 385<br/>Huancayo, Junín, Perú</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">📞</div>
+            <h4>Teléfono</h4>
+            <p>+51 937007370<br/>+51 904960485</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">✉</div>
+            <h4>Email</h4>
+            <p>info@novastudio.pe<br/>reservas@novastudio.pe</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">🕐</div>
+            <h4>Horarios</h4>
+            <p>Lun – Sáb: 9:00 – 19:00<br/>Dom: 10:00 – 16:00</p>
+          </div>
+        </div>
+
+        <div class="contacto__social reveal">
+          <h3>Síguenos en redes</h3>
+          <p>Descubre nuestro trabajo diario, promociones exclusivas y tips de belleza.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/nova.studiohyo/" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              <span>@novastudio</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100063532818487&ref=PROFILE_EDIT_xav_ig_profile_page_web#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
+              <span>Nova Studio</span>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              <span>@novastudio</span>
+            </a>
+            <a href="https://wa.me/51937007370" class="social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <span>Escríbenos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <div class="logo logo--light">
+            <span class="logo__main">NOVA</span>
+            <span class="logo__sub">STUDIO</span>
+          </div>
+          <p class="footer__slogan">La protagonista eres tú</p>
+          <p class="footer__desc">Tu espacio de confianza para cuidarte y brillar. Belleza, estilo y bienestar en un solo lugar.</p>
+        </div>
+
+        <div class="footer__col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="#servicios">Peinados &amp; Cortes</a></li>
+            <li><a href="#servicios">Manicura</a></li>
+            <li><a href="#servicios">Pedicura</a></li>
+            <li><a href="#servicios">Tratamientos Faciales</a></li>
+            <li><a href="#servicios">Coloración</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#reservas">Reservar Cita</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Síguenos</h5>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/nova.studiohyo/" aria-label="Instagram">Ig</a>
+            <a href="https://www.facebook.com/profile.php?id=100063532818487&ref=PROFILE_EDIT_xav_ig_profile_page_web#" aria-label="Facebook">Fb</a>
+            <a href="#" aria-label="TikTok">Tk</a>
+            <a href="https://wa.me/51937007370" aria-label="WhatsApp">Wa</a>
+          </div>
+          <div class="footer__newsletter">
+            <p>Suscríbete a nuestras novedades</p>
+            <div class="footer__newsletter-form">
+              <input type="email" placeholder="tu@correo.com" />
+              <button class="btn btn--primary btn--small" onclick="subscribeNewsletter(this)">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2024 NOVA STUDIO. Todos los derechos reservados.</p>
+        <p>Diseñado con amor para ti ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/51937007370?text=Hola%20Nova%20Studio%2C%20quisiera%20reservar%20una%20cita" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
